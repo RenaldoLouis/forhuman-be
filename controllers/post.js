@@ -15,8 +15,7 @@ const getAllProducts = async (req, res) => {
 }
 
 const getProduct = async (req, res) => {
-    let { id } = req.params;
-    id = Number(id);
+    let { tag } = req.params;
     try {
         let product = products.find(product => product.tag === tag);
         res.status(200).json({
